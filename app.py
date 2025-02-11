@@ -13,7 +13,7 @@ if not os.path.exists(model_path):
     st.warning("Downloading model from Google Drive...")
     gdown.download(url, model_path, quiet=False)
 try:
-    model = tf.keras.models.load_model('model_path')
+    model = tf.keras.models.load_model('model.weights.h5')
     model.save('model.h5')
     st.success("Model loaded successfully!")
 except Exception as e:
