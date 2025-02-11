@@ -6,7 +6,7 @@ import os
 
 file_id = "1joBLLGeLlP_dNWQeoMoUb6BjcL3yxvmk"
 url = 'https://drive.google.com/uc?export=download&id=1joBLLGeLlP_dNWQeoMoUb6BjcL3yxvmk'
-model_path = "trained_plant_disease1_model.keras"
+model_path = "model.weights.h5"
 
 
 if not os.path.exists(model_path):
@@ -14,7 +14,7 @@ if not os.path.exists(model_path):
     gdown.download(url, model_path, quiet=False)
 try:
     model = tf.keras.models.load_model('model.weights.h5')
-    model.save('model.h5')
+   
     st.success("Model loaded successfully!")
 except Exception as e:
     st.error(f"Error loading model: {str(e)}")
