@@ -14,6 +14,8 @@ if not os.path.exists(model_path):
     gdown.download(url, model_path, quiet=False)
 
 
+# Now load the model
+model = tf.keras.models.load_model(model_path)
 
 
 def model_prediction(test_image):
