@@ -6,18 +6,16 @@ import os
 
 file_id = "1joBLLGeLlP_dNWQeoMoUb6BjcL3yxvmk"
 url = 'https://drive.google.com/file/d/1joBLLGeLlP_dNWQeoMoUb6BjcL3yxvmk/view'
-model_path = "model.weights.h5"
+model_path = "trainded_plant_disease1_model.keras"
 
 
 if not os.path.exists(model_path):
     st.warning("Downloading model from Google Drive...")
     gdown.download(url, model_path, quiet=False)
-else:
-    model = tf.keras.models.load_model(model_path)
 
 
 
-model_path = "trained_plant_disease1_model.keras"
+
 def model_prediction(test_image):
     model = tf.keras.models.load_model(model_path)
     image = tf.keras.preprocessing.image.load_img(test_image,target_size=(128,128))
