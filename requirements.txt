@@ -3,3 +3,4 @@ streamlit
 keras
 numpy
 matplotlib
+gdown
