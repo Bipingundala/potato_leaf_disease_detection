@@ -12,15 +12,13 @@ model_path = "trained_plant_disease1_model.keras"
 if not os.path.exists(model_path):
     st.warning("Downloading model from Google Drive...")
     gdown.download(url, model_path, quiet=False)
-"""try:
+try:
     model = tf.keras.models.load_model('model_path')
     model.save('model.h5')
     st.success("Model loaded successfully!")
 except Exception as e:
-    st.error(f"Error loading model: {str(e)}")"""
-from tensorflow.keras.layers import TFSMLayer
+    st.error(f"Error loading model: {str(e)}")
 
-model = TFSMLayer(model_path, call_endpoint='serving_default')
 
 
 
