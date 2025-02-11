@@ -6,7 +6,7 @@ import os
 
 file_id = "1joBLLGeLlP_dNWQeoMoUb6BjcL3yxvmk"
 url = 'https://drive.google.com/file/d/1joBLLGeLlP_dNWQeoMoUb6BjcL3yxvmk/view'
-model_path = "trained_plant_disease1_model.keras"
+model_path = "model.weights.h5"
 
 
 if not os.path.exists(model_path):
