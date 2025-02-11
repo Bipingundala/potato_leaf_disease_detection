@@ -6,16 +6,15 @@ import os
 
 file_id = "1joBLLGeLlP_dNWQeoMoUb6BjcL3yxvmk"
 url = 'https://drive.google.com/uc?export=download&id=1joBLLGeLlP_dNWQeoMoUb6BjcL3yxvmk'
-model_path = "model.weights.h5"
+model_path = "trained_plant_disease1_model.keras"
 
 
 if not os.path.exists(model_path):
     st.warning("Downloading model from Google Drive...")
     gdown.download(url, model_path, quiet=False)
-model = tf.keras.models.load_model('model.weights.h5')
+model_path = "trained_plant_disease1_model.keras"
+
    
-
-
 
 
 
